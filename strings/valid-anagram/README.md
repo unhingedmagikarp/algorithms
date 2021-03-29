@@ -1,4 +1,4 @@
-#   Valid Anagram
+# Valid Anagram
 
 - Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.
 
@@ -15,7 +15,7 @@
 ### Example 2
 
 > Input: s = "rat", t = "car"
-Output: false
+  Output: false
 
 ## Solution(s)
 
