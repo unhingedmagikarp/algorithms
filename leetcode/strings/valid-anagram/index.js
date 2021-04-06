@@ -4,8 +4,8 @@
  * @return {boolean}
  */
 
-// Anagram
-function isAnagram(s = "anagram", t = "nagaram") {
+// Solution based on hashmap
+function isAnagram(s, t) {
   if (s.length !== t.length) return false;
 
   if (s === t) return true;
@@ -27,4 +27,18 @@ function isAnagram(s = "anagram", t = "nagaram") {
   return true;
 }
 
-console.log(isAnagram());
+// One liner using built in functions only
+function isAnagram(s, t) {
+  return s.split("").sort().join("") === t.split("").sort().join("");
+}
+
+// Solution using the original string and chipping away common characters
+function isAnagram(s, t) {
+  while (s.length && s.indexOf(t[s.length - 1]) !== -1) {
+    if (s.length === 0) return false;
+
+    s = s.replace(t[s.length - 1], "");
+  }
+
+  return s.length === 0;
+}
